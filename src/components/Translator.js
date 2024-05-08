@@ -55,32 +55,33 @@ const Translator = () => {
         }
     };
 
-    const detectLanguage = async () => {
-        try {
-            const response = await axios.post(
-                'https://google-translate1.p.rapidapi.com/language/translate/v2/detect',
-                new URLSearchParams({
-                    q: inputText
-                }),
-                {
-                    headers: {
-                        'content-type': 'application/x-www-form-urlencoded',
-                        'X-RapidAPI-Key': '1d625a22b6msh15a3564bf72f4b9p1427bfjsn34c93c852d7c',
-                        'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
-                    }
-                }
-            );
-            setSourceLanguage(response.data.data.detections[0][0].language);
-        } catch (error) {
-            setError('Error detecting language. Please try again later.');
-        }
-    };
-
     useEffect(() => {
+        const detectLanguage = async () => {
+            try {
+                const response = await axios.post(
+                    'https://google-translate1.p.rapidapi.com/language/translate/v2/detect',
+                    new URLSearchParams({
+                        q: inputText
+                    }),
+                    {
+                        headers: {
+                            'content-type': 'application/x-www-form-urlencoded',
+                            'X-RapidAPI-Key': '1d625a22b6msh15a3564bf72f4b9p1427bfjsn34c93c852d7c',
+                            'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
+                        }
+                    }
+                );
+                setSourceLanguage(response.data.data.detections[0][0].language);
+            } catch (error) {
+                setError('Error detecting language. Please try again later.');
+            }
+        };
+    
         if (inputText) {
             detectLanguage();
         }
-    }, [inputText, detectLanguage]);
+    }, [inputText]);
+    
 
     return (
         <div className="translator-container">
