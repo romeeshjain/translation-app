@@ -20,7 +20,7 @@ const Translator = () => {
                 'https://google-translate1.p.rapidapi.com/language/translate/v2/languages',
                 {
                     headers: {
-                        'X-RapidAPI-Key': '1d625a22b6msh15a3564bf72f4b9p1427bfjsn34c93c852d7c',
+                        'X-RapidAPI-Key': 'c2908dbcc1mshe5003510bb462f9p16a85ajsn31c6c7d5ff7a',
                         'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
                     }
                 }
@@ -44,7 +44,7 @@ const Translator = () => {
                 {
                     headers: {
                         'content-type': 'application/x-www-form-urlencoded',
-                        'X-RapidAPI-Key': '1d625a22b6msh15a3564bf72f4b9p1427bfjsn34c93c852d7c',
+                        'X-RapidAPI-Key': 'c2908dbcc1mshe5003510bb462f9p16a85ajsn31c6c7d5ff7a',
                         'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
                     }
                 }
@@ -66,7 +66,7 @@ const Translator = () => {
                     {
                         headers: {
                             'content-type': 'application/x-www-form-urlencoded',
-                            'X-RapidAPI-Key': '1d625a22b6msh15a3564bf72f4b9p1427bfjsn34c93c852d7c',
+                            'X-RapidAPI-Key': 'c2908dbcc1mshe5003510bb462f9p16a85ajsn31c6c7d5ff7a',
                             'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
                         }
                     }
