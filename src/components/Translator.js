@@ -80,7 +80,7 @@ const Translator = () => {
         if (inputText) {
             detectLanguage();
         }
-    }, [inputText]);
+    }, [inputText, detectLanguage]);
 
     return (
         <div className="translator-container">
